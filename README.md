@@ -1,21 +1,46 @@
-# Shapley Value Computation for Concept-based Model Explanation
-
-This project computes Shapley values to explain the predictions of a deep learning model (Inception-v3) based on concept-based features (subject and background concepts). The Shapley values are used to evaluate the importance of each concept in influencing the model's decision for a given target class.
-
-## Requirements
+# Requirements
 
 - Python 3.x
 - PyTorch
 - torchvision
-- tqdm
 - numpy
-- json
+- scikit-image
+- matplotlib
 
 You can install the required dependencies using pip:
 
 ```bash
 pip install torch torchvision tqdm numpy
 ```
+
+
+# Concepts Extraction
+
+This project performs model interpretation by discovering concepts related to the target class using images from a specified directory. Statistical testing is applied to filter concepts, and random experiments are used for evaluation. The script uses a PyTorch model (e.g., Inception-v3) to analyze image features and concepts.
+
+An example run command:
+
+```bash
+python ace_run.py --num_parallel_runs 0 --target_class timber_wolf --source_dir SOURCE_DIR_foreground --working_dir SAVE_DIR --model_to_run inception_v3 --labels_path imagenet_class_index.json --feature_names Mixed_7c --num_random_exp 20 --max_imgs 50 --min_imgs 30
+```
+where：
+```bash
+num_random_exp: number of random concepts with respect to which concept-activaion-vectors
+```
+For example if you set num_random_exp=20, you need to create folders random500_0, rando500_1, ..., random_500_19 and put them in the SOURCE_DIR where each folder contains a set of 50-500 randomly selected images of the dataset (ImageNet in our case).
+
+SOURCE_DIR: Directory where the discovery images (refer to the paper) are saved. 
+
+```bash
+target_class: Name of the class which prediction is to be explained.
+```
+
+# Shapley Value Computation for Concept-based Model Explanation
+
+This project computes Shapley values to explain the predictions of a deep learning model (Inception-v3) based on concept-based features (subject and background concepts). The Shapley values are used to evaluate the importance of each concept in influencing the model's decision for a given target class.
+
+
+
 
 ## Usage
 
