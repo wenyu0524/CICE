@@ -47,12 +47,13 @@ python shapley_value_computation.py \
 ## Output
 The Shapley values for each concept (subject and background) are saved to the specified output_file. The values are sorted by their importance, with the highest Shapley value first.
 
-Example Output
-python
+## Example Output
+```bash
 0 (Subject): 0.1234
 1 (Subject): 0.1101
 2 (Background): 0.0987
 ...
+```
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
