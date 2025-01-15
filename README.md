@@ -33,6 +33,9 @@ SOURCE_DIR: Directory where the discovery images (refer to the paper) are saved.
 
 ```bash
 target_class: Name of the class which prediction is to be explained.
+num_parallel_runs: Number of parallel jobs (loading images, etc). If 0, parallel processing is deactivated.
+SAVE_DIR: Where the experiment results (both text report and the discovered concept examples) are saved.
+model_to_run: Any torch.hub model. Note that you may need to edit the _get_gradients function in CICE.py.
 ```
 
 # Shapley Value Computation for Concept-based Model Explanation
