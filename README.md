@@ -15,11 +15,12 @@ You can install the required dependencies using pip:
 
 ```bash
 pip install torch torchvision tqdm numpy
+```
 
 Usage
 
 To compute Shapley values for the model, you can use the following command:
-
+```bash
 python shapley_value_computation.py \
     --input_sample_dir <path_to_input_samples> \
     --layer_name <layer_name_to_extract_activations_from> \
