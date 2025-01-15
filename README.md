@@ -10,7 +10,7 @@
 You can install the required dependencies using pip:
 
 ```bash
-pip install torch torchvision tqdm numpy
+pip install torch torchvision numpy
 ```
 
 
