@@ -17,7 +17,7 @@ You can install the required dependencies using pip:
 pip install torch torchvision tqdm numpy
 ```
 
-Usage
+## Usage
 
 To compute Shapley values for the model, you can use the following command:
 ```bash
@@ -32,7 +32,7 @@ python shapley_value_computation.py \
     --num_samples <number_of_samples_for_computation> \
     --output_file <output_file_to_save_results>
 ```
-Arguments
+## Arguments
 ```bash
 --input_sample_dir: Path to the directory containing input image samples.
 --layer_name: The name of the layer to extract activations from (e.g., 'Mixed_7c').
@@ -44,7 +44,7 @@ Arguments
 --num_samples: Number of samples to use for Shapley value computation (default is 10).
 --output_file: Path to the output file where Shapley values will be saved.
 ```
-Output
+## Output
 The Shapley values for each concept (subject and background) are saved to the specified output_file. The values are sorted by their importance, with the highest Shapley value first.
 
 Example Output
