@@ -79,7 +79,5 @@ The Shapley values for each concept (subject and background) are saved to the sp
 2 (Background): 0.0987
 ...
 ```
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-This README provides basic usage and description of the code without being too complicated. You can add more specific details as needed.
