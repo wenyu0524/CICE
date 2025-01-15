@@ -38,12 +38,9 @@ SAVE_DIR: Where the experiment results (both text report and the discovered conc
 model_to_run: Any torch.hub model. Note that you may need to edit the _get_gradients function in CICE.py.
 ```
 
-# Shapley Value Computation for Concept-based Model Explanation
+# Shapley Value Computation
 
 This project computes Shapley values to explain the predictions of a deep learning model (Inception-v3) based on concept-based features (subject and background concepts). The Shapley values are used to evaluate the importance of each concept in influencing the model's decision for a given target class.
-
-
-
 
 ## Usage
 
@@ -69,7 +66,7 @@ python shapley_value_computation.py \
 --background_concepts_path: Path to the file containing background concepts (in .npy format).
 --background_indices_path: Path to the file containing background concept indices (in .json format).
 --target_class: Index of the target class for which Shapley values will be computed.
---num_samples: Number of samples to use for Shapley value computation (default is 10).
+--num_samples: Number of samples to use for Shapley value computation .
 --output_file: Path to the output file where Shapley values will be saved.
 ```
 ## Output
